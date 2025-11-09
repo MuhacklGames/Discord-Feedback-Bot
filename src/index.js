@@ -4,7 +4,7 @@ import {
   ActionRowBuilder, ButtonBuilder, ButtonStyle,
   StringSelectMenuBuilder, StringSelectMenuOptionBuilder,
   ModalBuilder, TextInputBuilder, TextInputStyle,
-  ChannelType, EmbedBuilder, PermissionFlagsBits
+  ChannelType, EmbedBuilder
 } from 'discord.js';
 
 /* ====== ENV ====== */
@@ -57,7 +57,7 @@ const FEEDBACK_KIND = [
 
 const TOPIC_AREAS = [
   { label: 'UI/UX',        value: 'UI/UX',        emoji: '🖱️' },
-  { label: 'Gameplay',     value: 'Gameplay',     emoji: '🎮' },
+  { label: 'Gameplay Loop',value: 'Gameplay',     emoji: '🎮' },
   { label: 'Progression',  value: 'Progression',  emoji: '📈' },
   { label: 'Economy',      value: 'Economy',      emoji: '💰' },
   { label: 'Accessibility',value: 'Accessibility',emoji: '♿' },
@@ -301,21 +301,6 @@ client.on('interactionCreate', async (i) => {
       return await i.editReply('❌ Feedback forum not found or wrong channel type.');
     }
 
-    const me = i.guild.members.me;
-    const perms = forum.permissionsFor(me);
-    const need = [
-      'ViewChannel',
-      'SendMessages',
-      ('CreatePosts' in PermissionFlagsBits ? 'CreatePosts' : 'CreatePublicThreads'),
-      'SendMessagesInThreads',
-      'ManageThreads',
-      'ReadMessageHistory'
-    ];
-    const missing = need.filter(p => !perms?.has(PermissionFlagsBits[p]));
-    if (missing.length) {
-      return i.editReply('❌ Missing forum permissions:\n• ' + missing.join('\n• '));
-    }
-
     const openBtn = new ButtonBuilder().setCustomId(IDS.BTN_OPEN).setLabel('Give Feedback').setStyle(ButtonStyle.Success);
     const row = new ActionRowBuilder().addComponents(openBtn);
     const embed = makeFeedbackPanelEmbed();
@@ -325,9 +310,6 @@ client.on('interactionCreate', async (i) => {
       message: { embeds: [embed], components: [row] },
       reason: 'Feedback panel'
     });
-
-    const starterMsg = await thread.fetchStarterMessage().catch(() => null);
-    if (starterMsg?.url) console.log('Panel message URL:', starterMsg.url);
 
     await i.editReply({ content: `✅ Panel created: <#${thread.id}>` });
   } catch (err) {
