@@ -1,18 +1,1 @@
-{
-  "name": "discord-feedback-bot",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "Structured feedback bot for Discord forum channels.",
-  "main": "src/index.js",
-  "scripts": {
-    "dev": "node src/index.js",
-    "deploy": "node src/deploy-commands.js"
-  },
-  "keywords": ["discord", "feedback", "forum", "bot", "discord.js"],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "discord.js": "^14.15.3",
-    "dotenv": "^16.4.5"
-  }
-}
+
