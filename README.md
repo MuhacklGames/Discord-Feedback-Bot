@@ -29,8 +29,8 @@ _Designed with our Alpine clarity, 🐮 “Muh” spirit, and clean UI._
 
 ## ⚙️ Setup (Muhackl edition)
 
-### 1) Clone & install
 ```bash
+1) Clone & install
 git clone https://github.com/MuhacklGames/Discord-Feedback-Bot.git
 cd Discord-Feedback-Bot
 npm install
