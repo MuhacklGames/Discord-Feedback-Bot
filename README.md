@@ -1,6 +1,6 @@
 # 🧩 Muhackl Games — Discord Feedback Bot
 
-A lightweight, structured **Feedback Bot** for the Muhackl Games community. Players click **Give Feedback**, pick **Kind → Topic → Impact**, add a **title + details**, optionally attach media in a **temporary intake**, and the bot posts a **locked, beautifully formatted** forum thread.  
+A lightweight, structured **Feedback Bot** for your Discord community. Players click **Give Feedback**, pick **Kind → Topic → Impact**, add a **title + details**, optionally attach media in a **temporary intake**, and the bot posts a **locked, beautifully formatted** forum thread. Feel free to check out our Bugreport Bot as well! 
 _Designed with our Alpine clarity, 🐮 “Muh” spirit, and clean UI._
 
 ---
@@ -13,8 +13,6 @@ _Designed with our Alpine clarity, 🐮 “Muh” spirit, and clean UI._
 - 🔒 **Locked feedback threads** (reporters can’t clutter posts; team replies in-thread)
 - 🧱 **Resilient UX** with retry/backoff for shaky connections
 - 🧀 **Emoji language** that’s friendly, readable, and on-brand
-
-> _Tip:_ Use our Zugspitze silhouette and green/earthy tones in your Discord theme for a cohesive vibe.
 
 ---
 
@@ -61,7 +59,7 @@ Intake Text Channel: allow bot to create private threads (public as fallback), m
 
 5) Register command & run
 bash
-Code kopieren
+Copy Code
 npm run deploy      # adds /post_feedback_panel
 npm run dev         # start the bot
 In Discord (admin):
@@ -93,8 +91,8 @@ Version: v0.0.16
 
 Feedback details:
 ...
-🪄 Muhackl styling notes
-Emoji taxonomy (consistent across all comms):
+🪄 Styling notes
+Emoji taxonomy (consistent across all comms): #Customisable to yourn eeds
 
 Kind: ❤️ Praise • 💡 Suggestion • ⚠️ Concern • ⚖️ Balance • 🧰 QoL • 🚀 Performance • 🌍 Localization • 🧭 Other
 
