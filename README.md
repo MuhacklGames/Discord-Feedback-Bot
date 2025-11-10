@@ -38,7 +38,7 @@ npm install
 Create .env (or copy from .env.example) and fill:
 
 env
-Code kopieren
+Copy Code
 DISCORD_TOKEN=your_bot_token
 GUILD_ID=your_guild_id
 FEEDBACK_FORUM_CHANNEL_ID=forum_channel_id
@@ -83,7 +83,7 @@ Bot creates a locked forum thread with emoji tags and clean sections
 Example output
 
 yaml
-Code kopieren
+Copy Code
 💬 [Title]
 From: @User
 Kind: Suggestion
