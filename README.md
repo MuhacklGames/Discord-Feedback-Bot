@@ -5,7 +5,7 @@ _Designed with our Alpine clarity, 🐮 “Muh” spirit, and clean UI._
 
 ---
 
-## 🎯 Why this bot (for Muhackl)
+## 🎯 Why this bot
 
 - 🧭 **Guided flow** that keeps feedback focused and consistent
 - 🏔️ **Clarity-first formatting** (concise titles, readable sections, emoji taxonomy)
@@ -27,7 +27,7 @@ _Designed with our Alpine clarity, 🐮 “Muh” spirit, and clean UI._
 
 ---
 
-## ⚙️ Setup (Muhackl edition)
+## ⚙️ Setup 
 
 ```bash
 1) Clone & install
